@@ -40,7 +40,7 @@ module.exports = {
                 loader: "url-loader?limit=100000"
             },
             {
-                test: /\.jpg$/,
+                test: /\.(jpg|JPG|jpeg|JPEG)$/,
                 loader: "file-loader"
             },
             {
@@ -58,6 +58,14 @@ module.exports = {
             {
                 test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'url?limit=10000&mimetype=image/svg+xml'
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader?attrs[]=video:src'
+            },
+            {
+                test: /\.(mov|mp4)$/,
+                loader: 'file-loader',   
             }
         ]
     },
