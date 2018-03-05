@@ -1,8 +1,10 @@
 language: node_js
 node_js:
-  - "iojs"
   - "8"
 install:
   - npm install
-after_install:
-  - npm run build
+script: sh build.sh
+deploy:
+  provider: heroku
+  api_key: 96bcbb80-0c29-4838-bd87-7d1f66b721ff
+  app: echtrade21
