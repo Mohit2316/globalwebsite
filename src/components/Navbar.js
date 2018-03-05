@@ -7,6 +7,7 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
+import Logo from '../assets/images/Logo.PNG';
 
 const styles = {
   root: {
@@ -29,16 +30,17 @@ function ButtonAppBar(props) {
     color: 'white',
     padding: '0 30px',
     boxShadow: '0 3px 5px 2px steelbird',
+    height: '5em',
   };
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={style}>
+      <AppBar position="fixed" style={style}>
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
+            <img src={Logo} style={{height: '5em', width: '10em', position: 'relative', top: '-1.2em', left: '4em'}}/>
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.flex}>
-            EchTrade
+            
           </Typography>
           <Button color="inherit">
             Home
@@ -46,7 +48,7 @@ function ButtonAppBar(props) {
           <Button color="inherit">
             About Us
           </Button>
-          <Button color="inherit">
+          <Button color="inherit" href="#expertise">
             Expertise
           </Button>
           <Button color="inherit">

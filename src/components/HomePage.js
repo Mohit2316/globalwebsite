@@ -21,7 +21,7 @@ import HandicreaftSvcImg from '../assets/images/handicraft/1.jpg';
 import WhyUsImg from '../assets/images/whyus.JPG'
 import Divider from 'material-ui/Divider';
 import StatBox from './Stats';
-import StatsBgImage from '../assets/images/stats.JPG';
+import StatsBgImage from '../assets/images/statistics_2.jpeg';
 import ClientBox from './Client';
 import GoogleMap from './GoogleMap';
 
@@ -49,19 +49,19 @@ function CenteredGrid(props) {
         </Grid>
       </Grid>
 
-      <Grid container spacing={0}>
+      <Grid container spacing={0} style={{paddingTop: '2em', paddingBottom: '2em'}}>
         <Grid item xs={5}>
           <Paper className={classes.paper} style={{padding: 0, position: 'relative'}}>
             <img src={homePageSideImage} alt="Home Image" width="100%"/>
           </Paper>
         </Grid>
         <Grid item xs={7}>
-          <Paper className={classes.paper} style={{padding: 0, position: 'relative', width: '100%', height: '100%'}}>
+          <Paper className={classes.paper} style={{padding: 0, width: '100%', height: '100%', color: 'steelblue'}}>
             <div>
-              <Typography variant="title" component="h1" style={{fontWeight: 'bold', padding: '1em', fontSize: '2.5em'}}>
+              <Typography variant="title" component="h1" style={{fontWeight: 'bold', padding: '1em', fontSize: '2.5em'}} color="inherit">
                 Welcome To Echtrade
               </Typography>
-              <Typography variant="title" component="p" style={{fontSize: '1.5em'}}>
+              <Typography variant="title" component="p" style={{fontSize: '1.5em'}} color="inherit">
                 Do you wish to try the commodities, countries are famous for? 
               </Typography>
               <Typography component="p" style={{fontSize: '1em', padding: '2vw'}}>
@@ -74,7 +74,7 @@ function CenteredGrid(props) {
         </Grid>
       </Grid>
 
-      <Grid container justify="center" alignContent="center" alignItems="center" spacing={0} style={{paddingLeft: '2vw', paddingTop: '2vh', backgroundColor: 'steelblue'}}>
+      <Grid container justify="center" alignContent="center" alignItems="center" spacing={0} style={{paddingLeft: '2vw', paddingTop: '2vh', backgroundColor: 'dimgrey'}}>
       <Grid item xs={5}>
         </Grid>
         <Grid item xs={7} >
@@ -159,7 +159,7 @@ function CenteredGrid(props) {
         </Grid>
       </Grid>
 
-      <Grid container spacing={0}>
+      <Grid container spacing={0} style={{paddingTop: '2em'}}>
         <Grid item xs={6} >
         <Paper className={classes.paper} style={{height: '100%'}}>
           <Typography variant="headline" component="h1" style={{fontSize: '3em', paddingBottom: '1em'}}>
@@ -168,9 +168,7 @@ function CenteredGrid(props) {
           <Divider/>
           <Typography component="p" style={{fontSize: '1.2em', paddingTop: '2em'}}>
           <Icon style={{color: 'orange', fontSize: '40px'}}>sentiment_very_satisfied</Icon>100% satisfied customers
-   Our strong sense of delivery with client projects means that we are constantly striving to provide solutions, even for issues our customers aren't yet aware of.  
-
-   
+   Our strong sense of delivery with client projects means that we are constantly striving to provide solutions, even for issues our customers aren't yet aware of.
           </Typography>
           
           <Typography component="p" style={{fontSize: '1.2em', paddingTop: '2em'}}>
@@ -192,14 +190,14 @@ function CenteredGrid(props) {
           <img src={WhyUsImg} />
         </Grid>
       </Grid>
-      <Grid container spacing={12} style={{paddingLeft: '8em', paddingTop: '10em', height: '50vh', backgroundImage: `url(${StatsBgImage})`}}>
+      <Grid id="expertise" container spacing={12} style={{paddingLeft: '16em', paddingTop: '10em', height: '50vh', backgroundImage: `url(${StatsBgImage})`}}>
         <StatBox title="5+" content="Years of Experience"/>
         <StatBox title="45+" content="Commodities"/>
         <StatBox title="8+" content="Countries"/>
         <StatBox title="30+" content="Dealers"/>
       </Grid>
 
-      <Grid container spacing={0} style={{paddingBottom: '1em'}}>
+      <Grid container spacing={0} style={{paddingBottom: '1em', paddingTop: '2em'}}>
       <Grid item xs={5}>
         </Grid>
         <Grid item xs={7} >

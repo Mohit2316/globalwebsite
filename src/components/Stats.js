@@ -18,7 +18,7 @@ function StatBox(props) {
   const { classes, title, content} = props;
   return (
       <Grid item xs={3} style={{color: 'white'}}>
-        <Typography variant="heading" component="h4" style={{fontSize: '4em', color: '#f1a70c'}}>
+        <Typography variant="heading" component="h4" style={{fontSize: '4em', color: 'white', opacity: '0.9'}}>
             {title}
         </Typography>
         <Typography component="p" color="inherit">
