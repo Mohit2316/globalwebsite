@@ -10,6 +10,7 @@ import Icon from 'material-ui/Icon/Icon';
 const styles = {
   card: {
     maxWidth: '100%',
+    boxShadow: '0 3px 5px 2px steelbird',
   },
   media: {
     height: 200,
@@ -22,14 +23,14 @@ function ClientCard(props) {
     <div>
       <Card className={classes.card}>
         <CardContent>
-            <Icon style={{color: 'orange'}}>
+            <Icon style={{color: '#f1a70c'}}>
                 bookmark_order
             </Icon>
-          <Typography component="p">
+          <Typography component="p" style={{fontSize: '1.2em'}}>
             {content}
           </Typography>
           <br/>
-          <Typography variant="headline" component="h2">
+          <Typography variant="headline" component="h1" style={{fontSize: '1.4em'}}>
             - {clientName}
           </Typography>
           <p>

@@ -43,27 +43,44 @@ function CenteredGrid(props) {
     <div className={classes.root}>
       <Grid container spacing={0}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>
+          <Paper className={classes.paper} style={{padding: 0}}>
             <ShipVideo/>
           </Paper>
         </Grid>
+      </Grid>
+
+      <Grid container spacing={0}>
         <Grid item xs={5}>
-          <Paper className={classes.paper}>
+          <Paper className={classes.paper} style={{padding: 0, position: 'relative'}}>
             <img src={homePageSideImage} alt="Home Image" width="100%"/>
           </Paper>
         </Grid>
         <Grid item xs={7}>
-          <Paper className={classes.paper}>
-            <Typography variant="headline" component="h2">
-              Welcome To Echtrade
-            </Typography>
-            <Typography component="p">
-            Do you wish to try the commodities, countries are famous for? Well, we are here- Echtrade to bridge the gap of million kilometres and make commodities available just a step ahead. We are a company for the export, import and distribution of essentials "to and from" different corners of the world, providing a wide range of services to our clients and dealers from more than 7 years, having 30+ National and International associates, dealers and clients reaching 5+ countries and growing... 
-              We intend to provide the best of services throughout the years ahead and to accelerate ourselves to be one of the leading trading corporations, dealing in millions of metric tons of commodities all over the world.
-            </Typography>
+          <Paper className={classes.paper} style={{padding: 0, position: 'relative', width: '100%', height: '100%'}}>
+            <div>
+              <Typography variant="title" component="h1" style={{fontWeight: 'bold', padding: '1em', fontSize: '2.5em'}}>
+                Welcome To Echtrade
+              </Typography>
+              <Typography variant="title" component="p" style={{fontSize: '1.5em'}}>
+                Do you wish to try the commodities, countries are famous for? 
+              </Typography>
+              <Typography component="p" style={{fontSize: '1em', padding: '2vw'}}>
+              Well, we are here- Echtrade to bridge the gap of million kilometres and make commodities available just a step ahead. We are a company for the export, import and distribution of essentials "to and from" different corners of the world, providing a wide range of services to our clients and dealers from more than 7 years, having 30+ National and International associates, dealers and clients reaching 5+ countries and growing... 
+                We intend to provide the best of services throughout the years ahead and to accelerate ourselves to be one of the leading trading corporations, dealing in millions of metric tons of commodities all over the world.
+              </Typography>
+            </div>
           </Paper>
+          
         </Grid>
-        <Grid item xs={3}>
+      </Grid>
+
+      <Grid container justify="center" alignContent="center" alignItems="center" spacing={0} style={{paddingLeft: '2vw', paddingTop: '2vh', backgroundColor: 'steelblue'}}>
+      <Grid item xs={5}>
+        </Grid>
+        <Grid item xs={7} >
+          <Paper variant="display1" elevation={0} component="h1" style={{border: 0, backgroundColor: 'transparent', color: 'white'}}>Services</Paper>
+        </Grid>
+      <Grid item xs={3}>
           <ServiceCard 
             title="Textile and textile Articles" 
             content="Echtrade tends to dispense a wide variety of ancient and modern textile that is intended to comfort the user with a sense of pleasure. The variety range of textile products is designed to outreach the boundaries and ease the user with style and class."
@@ -141,26 +158,28 @@ function CenteredGrid(props) {
             />
         </Grid>
       </Grid>
-      <Grid container spacing={0} style={{paddingLeft: '2vw', paddingTop: '2vh'}}>
-        <Grid item xs={6}>
-        <Paper className={classes.paper}>
-          <Typography variant="headline" component="h1">
+
+      <Grid container spacing={0}>
+        <Grid item xs={6} >
+        <Paper className={classes.paper} style={{height: '100%'}}>
+          <Typography variant="headline" component="h1" style={{fontSize: '3em', paddingBottom: '1em'}}>
             Why Choose Us?
           </Typography>
-          <Typography component="p">
+          <Divider/>
+          <Typography component="p" style={{fontSize: '1.2em', paddingTop: '2em'}}>
           <Icon style={{color: 'orange', fontSize: '40px'}}>sentiment_very_satisfied</Icon>100% satisfied customers
    Our strong sense of delivery with client projects means that we are constantly striving to provide solutions, even for issues our customers aren't yet aware of.  
 
    
           </Typography>
-          <Divider/>
-          <Typography component="p">
+          
+          <Typography component="p" style={{fontSize: '1.2em', paddingTop: '2em'}}>
           <Icon style={{color: 'green', fontSize: '40px'}}>attach_money</Icon>Quality service, affordable price
    We offer the easiest and cheapest way of trading services all over the world. Do not miss a chance to reach to the better part of the world on pocket friendly prices. 
    
           </Typography>
-          <Divider/>
-          <Typography component="p">
+          
+          <Typography component="p" style={{fontSize: '1.2em', paddingTop: '2em'}}>
           <Icon style={{color: 'green', fontSize: '40px'}}>public</Icon>
           Worldwide Trade
    Echrade is committed to helping its clients reach their goals, to personalising their product experiences, to providing a favourable environment, and making a difference. 
@@ -173,19 +192,24 @@ function CenteredGrid(props) {
           <img src={WhyUsImg} />
         </Grid>
       </Grid>
-
-      <Grid container spacing={0} style={{paddingLeft: '2vw', paddingTop: '2vh', height: '50vh', backgroundImage: `url(${StatsBgImage})`}}>
+      <Grid container spacing={12} style={{paddingLeft: '8em', paddingTop: '10em', height: '50vh', backgroundImage: `url(${StatsBgImage})`}}>
         <StatBox title="5+" content="Years of Experience"/>
         <StatBox title="45+" content="Commodities"/>
         <StatBox title="8+" content="Countries"/>
         <StatBox title="30+" content="Dealers"/>
       </Grid>
 
-      <Grid container spacing={0} >
-      <Grid item xs={6}>
+      <Grid container spacing={0} style={{paddingBottom: '1em'}}>
+      <Grid item xs={5}>
+        </Grid>
+        <Grid item xs={7} >
+          <Paper variant="display1" elevation={0} component="h1" style={{border: 0, backgroundColor: 'transparent', color: 'black'}}>What Our Clients Say</Paper>
+        </Grid>
+
+      <Grid item xs={6} style={{paddingLeft: '4em', paddingRight: '1em'}}>
           <ClientBox clientName="Elisha Atienzar" clientDesignation="Seattle, Washington" content="I’ve been happy with the services provided by Global Supreme Trade. All the members have been wonderful! They have returned my calls quickly, and answered all my questions! They have been very supportive. "/>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={6} style={{paddingRight: '4em', paddingLeft: '1em'}}>
           <ClientBox clientName="Baptiste Tauzin" clientDesignation="Bordeaux, France" content="This is due to their excellent service, reasonable pricing and customer support. That’s becoming so distant and digital, it’s thoroughly refreshing to get such a personal touch. Every aspect of a deal with GST is taken care of with utmost care and precision. We are happy to work with them!"/>
         </Grid>
       </Grid>
