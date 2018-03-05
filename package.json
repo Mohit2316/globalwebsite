@@ -11,9 +11,9 @@
     "start": "webpack-dev-server --config webpack-local.config.js --mode=dev",
     "start-prod": "webpack-dev-server --config webpack-prod.config.js",
     "demo-prod": "webpack-dev-server --config webpack-demo.config.js --mode=prod",
-    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
     "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js",
-    "start-server": "node ./app.js"
+    "start-server": "node ./app.js",
+    "test": "echo << No Tests"
   },
   "dependencies": {
     "express": "^4.16.2",
