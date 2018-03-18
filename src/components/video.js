@@ -9,7 +9,7 @@ class ShipVideo extends Component {
     render () {
         return (
             <video id="background-video" loop autoPlay width="100%">
-                <source src={shipVideo} type="video/mp4" />
+                {/* <source src={shipVideo} type="video/mp4" /> */}
                 Your browser does not support the video tag.
             </video>
         )

@@ -8,6 +8,7 @@ import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import Logo from '../assets/images/Logo.PNG';
+import { Link } from 'react-router-dom';
 
 const styles = {
   root: {
@@ -32,6 +33,12 @@ function ButtonAppBar(props) {
     boxShadow: '0 3px 5px 2px steelbird',
     height: '5em',
   };
+
+  const commonLinkStyle = {
+    color: 'inherit',
+    textDecorationLine: 'none',
+    textTransform: 'none'
+  }
   return (
     <div className={classes.root}>
       <AppBar position="fixed" style={style}>
@@ -43,19 +50,39 @@ function ButtonAppBar(props) {
             
           </Typography>
           <Button color="inherit">
-            Home
+            <Link to="/" style={commonLinkStyle}>Home</Link>
           </Button>
           <Button color="inherit">
-            About Us
+            <Link 
+              to="/about-us" 
+              style={commonLinkStyle}>
+              About Us
+            </Link>
           </Button>
-          <Button color="inherit" href="#expertise">
-            Expertise
+          <Button 
+            color="inherit" 
+            href="#expertise"
+            >
+            <Link 
+              to="/expertise" 
+              style={commonLinkStyle}>
+              Expertise
+            </Link>
           </Button>
           <Button color="inherit">
-            Import & Export
+            <Link 
+                to="/import-export" 
+                style={commonLinkStyle}>
+                Import & Export
+            </Link>
+            
           </Button>
           <Button color="inherit">
-            Contact Us
+              <Link 
+                    to="/contact-us" 
+                    style={commonLinkStyle}>
+                    Contact Us
+              </Link>
           </Button>
         </Toolbar>
       </AppBar>
