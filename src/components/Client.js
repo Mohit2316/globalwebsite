@@ -11,6 +11,7 @@ const styles = {
   card: {
     maxWidth: '100%',
     boxShadow: '0 3px 5px 2px steelbird',
+    height: '18em'
   },
   media: {
     height: 200,

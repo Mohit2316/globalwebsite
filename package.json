@@ -25,7 +25,11 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.0",
     "react-dom": "^15.5.0",
-    "react-spinners": "^0.2.5"
+    "react-fontawesome": "^1.6.1",
+    "react-google-maps": "^9.4.5",
+    "react-social-icons": "^2.8.1",
+    "react-spinners": "^0.2.5",
+    "recompose": "^0.26.0"
   },
   "peerDependencies": {
     "react": "~0.14.8 || ^15.0.0",
