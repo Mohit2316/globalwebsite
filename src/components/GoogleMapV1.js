@@ -11,7 +11,7 @@ const {
 
 const MapWithAMakredInfoWindow = compose(
   withStateHandlers(() => ({
-    isOpen: false,
+    isOpen: true,
   }), {
     onToggleOpen: ({ isOpen }) => () => ({
       isOpen: !isOpen,
