@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 
 import { Grid, Row, Col, Image } from 'react-bootstrap';
 
+import { Link } from 'react-router-dom';
+
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Divider from 'material-ui/Divider';
 import Icon from 'material-ui/Icon';
 
-import { SocialIcon } from 'react-social-icons';
+
 
 import shipVideo from '../assets/videos/ship.mp4';
 import homePageSideImage from '../assets/images/homesideimg.JPG';
@@ -30,6 +32,7 @@ import ClientBox from '../components/Client';
 import StatBox from '../components/Stats';
 import ServiceCard from '../components/Services';
 import GoogleMap from '../components/GoogleMapV1';
+import Footer from '../components/Footer';
 // local inline styles for all elements in home page
 const style = {
     outerGrid: {
@@ -146,7 +149,7 @@ class HomePage extends PureComponent {
                             </Typography>
                             <br/>
                             <Button variant="raised" color="primary">
-                                All Services
+                                <Link to="/services">All Services</Link>
                             </Button>
                         </Col>
                         <Col md={2} sm={12}>
@@ -159,18 +162,18 @@ class HomePage extends PureComponent {
 
                         <Col md={2} sm={12}>
                             <ServiceCard 
-                                    title="Textile and textile Articles" 
-                                    content="Echtrade tends to dispense a wide variety of ancient and modern textile that is intended to comfort the user with a sense of pleasure. The variety range of textile products is designed to outreach the boundaries and ease the user with style and class."
-                                    media={TextileServiceImg}
-                            />
+                                title="Fabrics and yarns" 
+                                content="Echtrade has grown by leaps and bounds over the years. We have come a long way and now possesses one of the best collection of fabrics and yarns used to produce a wide range of utilities. Choose us to receive world class service in terms of effectiveness and efficiency. "
+                                media={FabricServiceImg}
+                                />
                         </Col>
 
                         <Col md={2} sm={12}>
-                            <ServiceCard 
-                                    title="Textile and textile Articles" 
-                                    content="Echtrade tends to dispense a wide variety of ancient and modern textile that is intended to comfort the user with a sense of pleasure. The variety range of textile products is designed to outreach the boundaries and ease the user with style and class."
-                                    media={TextileServiceImg}
-                            />
+                        <ServiceCard 
+                            title="Agriculture commodities" 
+                            content="Agriculture being the dominant sector in India’s economy, we import and export a wide range of commodities including cereals, special crops, pulses, oil seeds, poultry etc. Grace us with your involvement while nurturing the country’s economy in the agricultural sector, and let us be a part of your day-to-day life."
+                            media={AgricultureSvcImg}
+                        />
                         </Col>
 
                     </Row>
@@ -276,7 +279,9 @@ class HomePage extends PureComponent {
                     </Typography>
                     <br/>
                     <Button variant="raised" color="primary">
-                                Contact Us
+                               <a href="mailto:hello@echtrade.com">
+                                    Contact Us
+                                </a>
                     </Button>
                     </Col>
                     </Row>
@@ -298,46 +303,7 @@ class HomePage extends PureComponent {
                     </Row>
                 </Grid>
                 <Grid fluid={true} style={style.footer}>
-                    <Row className="show-grid">
-                        <Col mdOffset={4} md={1}>
-                            <SocialIcon 
-                                network="twitter"
-                                color="white"
-                                 />
-                        </Col>
-                        <Col md={1}>
-                            <SocialIcon 
-                                    network="facebook" 
-                                    color="white"
-                                    />
-                        </Col>
-                        <Col md={1}>
-                            <SocialIcon 
-                                    network="linkedin" 
-                                    color="white"
-                                    />
-                        </Col>
-                        <Col md={1}>
-                            <SocialIcon 
-                                    network="pinterest" 
-                                    color="white"
-                                    />
-                        </Col>
-                        <Col md={1}>
-                            <SocialIcon 
-                                    network="instagram" 
-                                    color="white"
-                                    />
-                        </Col>
-                    </Row>
-                    <br/>
-                    <Row>
-                        <Col mdOffset={5} md={5}>
-                        <Typography variant="title" component="p" style={{fontSize: '1em', color: 'white'}} >
-                            © 2018 Copyright: EchTrade Pvt Ltd
-                        </Typography>
-                        </Col>
-                    </Row>
+                    <Footer/>
                 </Grid>
             </div>
         )

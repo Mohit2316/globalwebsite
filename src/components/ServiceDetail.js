@@ -14,18 +14,18 @@ const styles = {
     width: '100%'
   },
   media: {
-    height: '15em',
+    height: '20em',
   },
   title: {
     fontWeight: 'bold',
-    fontSize: '1.4em'
+    fontSize: '2em'
   },
   content: {
     fontSize: '1em'
   }
 };
 
-function SimpleMediaCard(props) {
+function ServiceDetail(props) {
   const { classes, title, content, media, mediaTitle} = props;
   return (
     <div>
@@ -54,8 +54,8 @@ function SimpleMediaCard(props) {
   );
 }
 
-SimpleMediaCard.propTypes = {
+ServiceDetail.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleMediaCard);
+export default withStyles(styles)(ServiceDetail);
